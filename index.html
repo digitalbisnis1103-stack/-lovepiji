@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#ffd5e4">
+
+<title>For Piji ♡</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background:#ffd9e8;
+
+    color:#8f3658;
+
+    overflow:hidden;
+}
+
+
+/* =====================================================
+   WEBSITE
+===================================================== */
+
+.website{
+
+    width:100%;
+    height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:
+        25px
+        18px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        scale(.94)
+        translateY(20px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        visibility .7s ease;
+
+    overflow-y:auto;
+
+    scrollbar-width:none;
+}
+
+.page::-webkit-scrollbar{
+    display:none;
+}
+
+
+.page.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        scale(1)
+        translateY(0);
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,255,255,.85)
+            0 2px,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            circle at 88% 20%,
+            rgba(255,255,255,.8)
+            0 2px,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            circle at 18% 85%,
+            rgba(255,255,255,.75)
+            0 2px,
+            transparent 3px
+        ),
+
+        radial-gradient(
+            circle at 82% 78%,
+            rgba(255,255,255,.75)
+            0 2px,
+            transparent 3px
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffd9e8,
+            #ffc7da,
+            #ffe9f1
+        );
+
+    background-size:
+        55px 55px,
+        65px 65px,
+        70px 70px,
+        80px 80px,
+        100% 100%;
+
+    z-index:-2;
+}
+
+
+/* =====================================================
+   DECORATIVE CIRCLES
+===================================================== */
+
+.page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.17);
+
+    top:-100px;
+    right:-100px;
+
+    box-shadow:
+        -500px 650px 0
+        rgba(255,255,255,.12);
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content{
+
+    width:min(700px,100%);
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:5;
+}
+
+
+/* =====================================================
+   PAGE 1
+===================================================== */
+
+#page1 .content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+}
+
+
+/* =====================================================
+   BIG ENVELOPE
+===================================================== */
+
+.envelope-big{
+
+    font-size:155px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    display:inline-block;
+
+    filter:
+        drop-shadow(
+            0 18px 22px
+            rgba(160,40,80,.20)
+        );
+
+    animation:
+        envelopeFloat
+        2.5s
+        ease-in-out
+        infinite;
+
+    transition:
+        transform .25s ease;
+}
+
+.envelope-big:hover{
+
+    transform:
+        scale(1.1)
+        rotate(-5deg);
+}
+
+.envelope-big:active{
+
+    transform:
+        scale(.85)
+        rotate(5deg);
+}
+
+
+@keyframes envelopeFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50%{
+
+        transform:
+            translateY(-14px)
+            rotate(3deg);
+    }
+}
+
+
+/* =====================================================
+   PAGE 1 TEXT
+===================================================== */
+
+.page1-title{
+
+    margin-top:18px;
+
+    color:#a62d59;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+}
+
+
+.page1-subtitle{
+
+    margin-top:9px;
+
+    color:#b45a7b;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+
+/* =====================================================
+   LITTLE HEART UNDER ENVELOPE
+===================================================== */
+
+.page1-heart{
+
+    margin-top:15px;
+
+    color:#e44c82;
+
+    font-size:23px;
+
+    animation:
+        heartbeat
+        1.3s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes heartbeat{
+
+    0%,
+    100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.25);
+    }
+}
+
+
+/* =====================================================
+   PAGE 2
+===================================================== */
+
+#page2{
+
+    align-items:flex-start;
+
+    padding-top:30px;
+
+    padding-bottom:45px;
+}
+
+
+/* =====================================================
+   MESSAGE CARD
+===================================================== */
+
+.message{
+
+    width:min(610px,100%);
+
+    margin:auto;
+
+    position:relative;
+
+    background:
+        rgba(255,255,255,.78);
+
+    border:
+        2px solid
+        rgba(255,255,255,.95);
+
+    border-radius:35px;
+
+    padding:
+        25px
+        17px
+        35px;
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(170,40,90,.15),
+
+        inset
+        0 0 25px
+        rgba(255,180,205,.18);
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+/* =====================================================
+   DECORATIONS
+===================================================== */
+
+.decor{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    z-index:10;
+
+    user-select:none;
+}
+
+
+.decor-heart{
+
+    top:-15px;
+    left:-10px;
+
+    font-size:34px;
+
+    transform:
+        rotate(-15deg);
+}
+
+.decor-star{
+
+    top:5px;
+    right:-5px;
+
+    font-size:30px;
+
+    transform:
+        rotate(10deg);
+}
+
+.decor-flower{
+
+    bottom:-12px;
+    left:-5px;
+
+    font-size:28px;
+}
+
+.decor-sparkle{
+
+    bottom:-10px;
+    right:2px;
+
+    font-size:28px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.message-title{
+
+    color:#a62d59;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    text-shadow:
+        0 2px 0 white;
+}
+
+
+.message-title .mini-heart{
+
+    display:inline-block;
+
+    color:#ed5b91;
+
+    animation:
+        heartbeat
+        1.2s
+        infinite;
+}
+
+
+/* =====================================================
+   PHOTOS CONTAINER
+===================================================== */
+
+.photos{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:
+        8px auto
+        27px;
+
+    padding:
+        8px
+        10px;
+}
+
+
+/* =====================================================
+   POLAROID
+===================================================== */
+
+.photo-card{
+
+    width:46%;
+
+    max-width:210px;
+
+    background:#fff;
+
+    padding:
+        9px
+        9px
+        30px;
+
+    border-radius:5px;
+
+    position:relative;
+
+    box-shadow:
+
+        0 13px 28px
+        rgba(120,30,60,.18);
+
+    transition:
+        transform .3s ease;
+
+    cursor:pointer;
+}
+
+
+/* FIRST PHOTO */
+
+.photo-card:first-child{
+
+    transform:
+        rotate(-5deg)
+        translateY(5px);
+}
+
+
+/* SECOND PHOTO */
+
+.photo-card:last-child{
+
+    transform:
+        rotate(5deg)
+        translateY(-4px);
+}
+
+
+/* HOVER */
+
+.photo-card:hover{
+
+    transform:
+        rotate(0deg)
+        translateY(-9px)
+        scale(1.04);
+
+    z-index:20;
+}
+
+
+/* =====================================================
+   PORTRAIT PHOTO
+===================================================== */
+
+.photo-card img{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:
+        3 / 4;
+
+    object-fit:cover;
+
+    border-radius:3px;
+}
+
+
+/* =====================================================
+   POLAROID HEART
+===================================================== */
+
+.photo-card::after{
+
+    content:"♡";
+
+    position:absolute;
+
+    bottom:4px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    color:#e65788;
+
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   PHOTO STICKERS
+===================================================== */
+
+.photo-card:nth-child(1)::before{
+
+    content:"🎀";
+
+    position:absolute;
+
+    top:-23px;
+    left:-17px;
+
+    font-size:31px;
+
+    transform:
+        rotate(-15deg);
+
+    z-index:5;
+}
+
+
+.photo-card:nth-child(2)::before{
+
+    content:"✨";
+
+    position:absolute;
+
+    top:-18px;
+    right:-15px;
+
+    font-size:29px;
+
+    z-index:5;
+}
+
+
+/* =====================================================
+   MESSAGE BOX
+===================================================== */
+
+.message-text{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff6fa,
+            #fff0f6
+        );
+
+    border:
+        2px dashed
+        #efa1bd;
+
+    border-radius:26px;
+
+    padding:
+        21px
+        18px;
+
+    color:#8d4560;
+
+    font-size:14px;
+
+    line-height:1.95;
+
+    text-align:center;
+
+    box-shadow:
+
+        inset
+        0 0 20px
+        rgba(255,160,190,.12);
+}
+
+
+/* =====================================================
+   MESSAGE PARAGRAPH
+===================================================== */
+
+.message-text p{
+
+    margin-bottom:16px;
+}
+
+
+.message-text p:last-of-type{
+
+    margin-bottom:0;
+}
+
+
+/* =====================================================
+   FINAL LOVE
+===================================================== */
+
+.love-big{
+
+    display:block;
+
+    margin-top:17px;
+
+    color:#e3467c;
+
+    font-size:23px;
+
+    font-weight:900;
+
+    animation:
+        heartbeat
+        1.4s
+        ease-in-out
+        infinite;
+
+    text-shadow:
+        0 3px 8px
+        rgba(220,60,110,.15);
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    pointer-events:none;
+
+    z-index:100;
+
+    color:#e34c80;
+
+    animation:
+        heartRise
+        linear
+        forwards;
+}
+
+
+@keyframes heartRise{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.5);
+    }
+
+    15%{
+
+        opacity:1;
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translateY(-115vh)
+            rotate(360deg)
+            scale(1.2);
+    }
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button{
+
+    position:fixed;
+
+    top:14px;
+    right:14px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.92);
+
+    color:#b52e60;
+
+    font-size:19px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:
+        0 8px 22px
+        rgba(140,30,70,.15);
+
+    transition:.25s ease;
+}
+
+
+.music-button:hover{
+
+    transform:
+        scale(1.1);
+}
+
+
+.music-button.playing{
+
+    animation:
+        musicPulse
+        1.2s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes musicPulse{
+
+    0%,
+    100%{
+
+        box-shadow:
+            0 8px 22px
+            rgba(140,30,70,.15);
+    }
+
+    50%{
+
+        box-shadow:
+            0 8px 34px
+            rgba(225,60,120,.45);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .page{
+
+        padding:
+            22px
+            14px;
+    }
+
+
+    .envelope-big{
+
+        font-size:120px;
+    }
+
+
+    .page1-title{
+
+        font-size:23px;
+    }
+
+
+    .page1-subtitle{
+
+        font-size:12px;
+    }
+
+
+    #page2{
+
+        padding-top:28px;
+    }
+
+
+    .message{
+
+        padding:
+            23px
+            12px
+            32px;
+
+        border-radius:30px;
+    }
+
+
+    .message-title{
+
+        font-size:27px;
+
+        margin-bottom:18px;
+    }
+
+
+    .photos{
+
+        gap:8px;
+
+        padding:
+            7px
+            4px;
+    }
+
+
+    .photo-card{
+
+        width:46%;
+
+        padding:
+            7px
+            7px
+            26px;
+    }
+
+
+    .photo-card:nth-child(1)::before{
+
+        font-size:25px;
+
+        top:-19px;
+        left:-13px;
+    }
+
+
+    .photo-card:nth-child(2)::before{
+
+        font-size:24px;
+
+        top:-15px;
+        right:-12px;
+    }
+
+
+    .message-text{
+
+        font-size:13px;
+
+        line-height:1.9;
+
+        padding:
+            18px
+            14px;
+    }
+
+
+    .love-big{
+
+        font-size:21px;
+    }
+
+
+    .music-button{
+
+        width:42px;
+        height:42px;
+
+        top:12px;
+        right:12px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL SCREEN
+===================================================== */
+
+@media(max-width:380px){
+
+    .envelope-big{
+
+        font-size:105px;
+    }
+
+
+    .page1-title{
+
+        font-size:21px;
+    }
+
+
+    .message{
+
+        padding-top:20px;
+    }
+
+
+    .message-title{
+
+        font-size:25px;
+    }
+
+
+    .photo-card{
+
+        padding-bottom:24px;
+    }
+
+
+    .message-text{
+
+        font-size:12px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND MUSIC
+===================================================== -->
+
+<audio
+    id="backgroundMusic"
+    src="music.mp3"
+    loop
+    preload="auto">
+</audio>
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<button
+    class="music-button"
+    id="musicButton"
+    aria-label="Music">
+
+    ♫
+
+</button>
+
+
+<!-- =====================================================
+     WEBSITE
+===================================================== -->
+
+<div class="website">
+
+
+<!-- =====================================================
+     SLIDE 1
+===================================================== -->
+
+<section
+    class="page active"
+    id="page1">
+
+    <div class="content">
+
+
+        <!-- SURAT BESAR -->
+
+        <div
+            class="envelope-big"
+            id="envelope"
+            title="Klik suratnya">
+
+            💌
+
+        </div>
+
+
+        <h1 class="page1-title">
+
+            ada surat buat pijii ♡
+
+        </h1>
+
+
+        <p class="page1-subtitle">
+
+            tekan suratnya yaa...
+
+        </p>
+
+
+        <div class="page1-heart">
+
+            ♡
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SLIDE 2
+===================================================== -->
+
+<section
+    class="page"
+    id="page2">
+
+    <div class="content">
+
+
+        <div class="message">
+
+
+            <!-- DECORATION -->
+
+            <div class="decor decor-heart">
+                💗
+            </div>
+
+            <div class="decor decor-star">
+                ✨
+            </div>
+
+            <div class="decor decor-flower">
+                🌸
+            </div>
+
+            <div class="decor decor-sparkle">
+                💕
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1 class="message-title">
+
+                haiii pijii
+
+                <span class="mini-heart">
+                    ♡
+                </span>
+
+            </h1>
+
+
+            <!-- =================================================
+                 2 FOTO PORTRAIT
+            ================================================== -->
+
+            <div class="photos">
+
+
+                <!-- FOTO 1 -->
+
+                <div class="photo-card">
+
+                    <img
+                        src="foto1.jpg"
+                        alt="Foto Piji 1">
+
+                </div>
+
+
+                <!-- FOTO 2 -->
+
+                <div class="photo-card">
+
+                    <img
+                        src="foto2.jpg"
+                        alt="Foto Piji 2">
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 PESAN
+            ================================================== -->
+
+            <div class="message-text">
+
+
+                <p>
+
+                    haii pijii, thanks sdaa mauu
+                    jdii psangann wawaa 🥹💗
+
+                </p>
+
+
+                <p>
+
+                    i apologize for constantly
+                    hurting your feelingss andd
+                    makingg youu sadd.
+
+                </p>
+
+
+                <p>
+
+                    thankss too for makingg
+                    my dayss happyy 💗
+
+                </p>
+
+
+                <span class="love-big">
+
+                    love youu so muchh pijii ♡
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   ELEMENT
+===================================================== */
+
+const music =
+    document.getElementById(
+        "backgroundMusic"
+    );
+
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
+
+const envelope =
+    document.getElementById(
+        "envelope"
+    );
+
+
+const page1 =
+    document.getElementById(
+        "page1"
+    );
+
+
+const page2 =
+    document.getElementById(
+        "page2"
+    );
+
+
+let musicStarted = false;
+
+
+/* =====================================================
+   MUSIC VOLUME
+===================================================== */
+
+music.volume = 0.35;
+
+
+/* =====================================================
+   START MUSIC
+===================================================== */
+
+function startMusic(){
+
+    if(!music.paused){
+
+        musicStarted = true;
+
+        musicButton.classList.add(
+            "playing"
+        );
+
+        return;
+
+    }
+
+
+    music.play()
+
+        .then(function(){
+
+            musicStarted = true;
+
+            musicButton.classList.add(
+                "playing"
+            );
+
+        })
+
+        .catch(function(){
+
+            /*
+             Browser tertentu
+             memblokir autoplay.
+
+             Musik akan tetap mulai
+             ketika user melakukan
+             interaksi pertama.
+            */
+
+        });
+
+}
+
+
+/* =====================================================
+   TRY AUTOPLAY
+===================================================== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        startMusic();
+
+    }
+);
+
+
+/* =====================================================
+   FIRST USER INTERACTION
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function(){
+
+        startMusic();
+
+    },
+    {
+        once:true,
+        passive:true
+    }
+);
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+musicButton.addEventListener(
+    "click",
+    function(event){
+
+        event.stopPropagation();
+
+
+        if(music.paused){
+
+            music.play()
+
+                .then(function(){
+
+                    musicStarted = true;
+
+                    musicButton.classList.add(
+                        "playing"
+                    );
+
+                });
+
+        }
+
+        else{
+
+            music.pause();
+
+            musicButton.classList.remove(
+                "playing"
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   OPEN LETTER
+===================================================== */
+
+envelope.addEventListener(
+    "click",
+    function(){
+
+        startMusic();
+
+
+        page1.classList.remove(
+            "active"
+        );
+
+
+        page2.classList.add(
+            "active"
+        );
+
+
+        createHearts(35);
+
+    }
+);
+
+
+/* =====================================================
+   CREATE HEARTS
+===================================================== */
+
+function createHearts(amount){
+
+    for(
+        let i = 0;
+        i < amount;
+        i++
+    ){
+
+        setTimeout(
+
+            function(){
+
+                const heart =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                heart.className =
+                    "heart";
+
+
+                const heartTypes = [
+
+                    "♡",
+                    "♥",
+                    "💗",
+                    "💖",
+                    "💕",
+                    "💓",
+                    "💞",
+                    "💘"
+
+                ];
+
+
+                heart.innerHTML =
+                    heartTypes[
+                        Math.floor(
+                            Math.random() *
+                            heartTypes.length
+                        )
+                    ];
+
+
+                heart.style.left =
+                    Math.random() *
+                    100 +
+                    "vw";
+
+
+                heart.style.fontSize =
+                    (
+                        15 +
+                        Math.random() *
+                        25
+                    ) +
+                    "px";
+
+
+                heart.style.animationDuration =
+                    (
+                        4 +
+                        Math.random() *
+                        4
+                    ) +
+                    "s";
+
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+
+                    function(){
+
+                        heart.remove();
+
+                    },
+
+                    8500
+
+                );
+
+
+            },
+
+            i * 90
+
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   RANDOM FLOATING HEARTS
+===================================================== */
+
+setInterval(
+
+    function(){
+
+        if(
+            page2.classList.contains(
+                "active"
+            )
+        ){
+
+            createHearts(2);
+
+        }
+
+    },
+
+    2200
+
+);
+
+
+/* =====================================================
+   CLICK PHOTO = LITTLE HEARTS
+===================================================== */
+
+document
+    .querySelectorAll(".photo-card")
+    .forEach(
+
+        function(photo){
+
+            photo.addEventListener(
+                "click",
+                function(){
+
+                    createHearts(8);
+
+                }
+            );
+
+        }
+
+    );
+
+</script>
+
+</body>
+</html>
